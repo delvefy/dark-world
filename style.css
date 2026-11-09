@@ -235,3 +235,13 @@ footer.foot {
   font-size: 0.8rem;
   text-align: center;
 }
+
+/* quoted sources (prophecies, inscriptions) */
+.entry blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1.2rem;
+  border-left: 3px solid var(--blood);
+  color: var(--parchment);
+  font-style: italic;
+  font-size: 1.1rem;
+}

@@ -16,6 +16,7 @@ A growing wiki + hand-drawn map of a dark-fantasy world: early-modern European h
 - **Geography:** loosely inspired by the real map (relative layout only). Veleh in the middle; Bloria NW, Mechil NE, Ustrus SE across the Vorn Danu; the Eastern Sea on the east; Strova between the river's last bend and the sea.
 - **The Thirteen:** thirteen nigh-immortals. Not all identified. They rule through empires and proxies and fight each other. In 1488 AS one stands behind each of **Ustrus, Bloria, Mechil**. Their origin and their link to the Silence are **unknown even in-world** — keep it that way; record theories, never settle it.
 - **The Last Dawn:** the prophesied one who will return and destroy the Thirteen.
+- **The Last Dawn returns c. 400 years after 1488 AS** (around 1900 AS). No 1487–88 figure is it. No page states the date; in-world nobody knows when.
 - **The Grimoire** (of the Hundred-Eleven) is an **independent** relic with its own will. The Thirteen covet it. It was not made by them.
 - Other darkness that exists: bound relics, revenants and bargains (witches who take payment in lives), things left from before the Silence, state mage corps.
 
@@ -53,3 +54,4 @@ Timeline page from `events`; random "travel" button; trade routes as dashed line
 - Day 430 says the breach was "three years ago"; journal time since Day 70 is about one year.
 - Seasons drift: Day 291 has the harvest, Day 306 the first snow, yet the journal opens in spring.
 - Day 238 puts the whole company on horseback (company is foot-only).
+- Meta.MD says Andrej held the Rift with three times Mihail's men and implies a traitor (Olegzander). Wiki: Mihail had the larger army; Andrej's garrison was about three times the company's size; no traitor, the Hundred-Eleven opened the gate from inside.
