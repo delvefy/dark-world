@@ -51,7 +51,10 @@
       "links": ["battle-of-crows-pass", "fall-of-the-rift", "ocristan", "the-thirteen"] },
     { "id": "elric", "name": "Elric", "page": "people/elric.html", "realm": null,
       "summary": "Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.",
-      "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] }
+      "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] },
+    { "id": "olegzander", "name": "Olegzander", "page": "people/olegzander.html", "realm": "veleh",
+      "summary": "Ustrus's proxy, king of Veleh 1485–1487 AS. Called the Putrid for a Blackmire rot that never killed him. Brought down by a false story that he sold the Rift; dead in 1487 AS.",
+      "links": ["ocristan", "fall-of-the-rift", "the-rift", "baron-mihail", "trantar"] }
   ],
 
   "lore": [
@@ -82,9 +85,15 @@
     { "id": "death-of-the-king", "name": "Death of the last king of Veleh", "year": 1484, "page": null,
       "summary": "Arrow through the throat; some say murder. A dozen barons raise levies.",
       "places": ["ocristan"], "people": [], "links": [] },
+    { "id": "olegzander-crowned", "name": "Olegzander crowned", "year": 1485, "page": null,
+      "summary": "The council, at Ustrus's word, crowns the voievod who runs its tax press. Rival barons are paid to disband.",
+      "places": ["ocristan"], "people": ["olegzander"], "links": [] },
     { "id": "fall-of-the-rift", "name": "Fall of the Rift", "year": 1487, "page": "events/fall-of-the-rift.html",
       "summary": "Mihail and the Hundred-Eleven take the fortress that could not fall.",
-      "places": ["the-rift"], "people": ["baron-mihail", "elric"], "links": ["the-rift", "baron-mihail", "the-grimoire"] }
+      "places": ["the-rift"], "people": ["baron-mihail", "elric"], "links": ["the-rift", "baron-mihail", "the-grimoire"] },
+    { "id": "fall-of-olegzander", "name": "Fall of King Olegzander", "year": 1487, "page": null,
+      "summary": "A false story that he sold the Rift costs him the crown. After the bought vote his chair is empty; probably killed near the west gate, no body shown.",
+      "places": ["ocristan"], "people": ["olegzander"], "links": [] }
   ],
 
   "roads": [

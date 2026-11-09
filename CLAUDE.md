@@ -5,7 +5,7 @@ A growing wiki + hand-drawn map of a dark-fantasy world: early-modern European h
 ## Canon order
 
 1. **`world.json` is the single source of truth.** Read it first, every session. Never contradict it.
-2. **This wiki is the master canon.** Where the novel disagrees with the wiki, the wiki wins and the novel gets revised later. When adding something the novel already covers, take the novel's facts (Meta.MD world-building section) as the starting point.
+2. **This wiki is the master canon.** Where the novel disagrees with the wiki, the wiki wins and the novel gets revised later. The novel is raw material, not a constraint: it will be rewritten to fit, so change its facts freely when the wiki needs it. When adding something the novel already covers, take the novel's facts (Meta.MD world-building section) as the starting point.
 3. Real history is the hidden skeleton. **Never name real people, places or events on any page.** Twist them; don't cite them.
 
 ## Fixed decisions
@@ -42,6 +42,7 @@ A growing wiki + hand-drawn map of a dark-fantasy world: early-modern European h
 - Pick an empty spot on the map and invent what's there.
 - Or open an existing page and add a character, a conflict, a rumour.
 - Or pull a loose thread.
+- Or `/expand N`: add N pages strictly one at a time, each fully built and linked before the next (`.claude/skills/expand/SKILL.md`).
 
 ## Later
 
