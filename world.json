@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Atlas of the Silence",
+    "tone": "grim",
+    "voice": "neutral reference",
+    "source_novel": "~/work/writing/111 (Meta.MD, Chapters/)",
+    "map_viewbox": [0, 0, 1000, 700]
+  },
+
+  "calendar": {
+    "era": "AS",
+    "era_name": "After the Silence",
+    "year_zero": "The Silence: the disappearance of the kimberstone builders",
+    "current_year": 1488,
+    "notes": "Years only for now; no named months yet. The 111 journal's Day 1 falls in 1487 AS; its Day 438 falls in 1488 AS. Winter's worst stretch is called 'the long night' in Veleh; Ustrus has a rainy season instead of snow."
+  },
+
+  "realms": [
+    { "id": "veleh",  "name": "Veleh",  "kind": "kingdom", "summary": "Fractured kingdom in the seam between three empires. Capital Ocristan. Ustrus has held it by proxy for about fifty years.", "label": [380, 268] },
+    { "id": "bloria", "name": "Bloria", "kind": "empire",  "summary": "Northwestern empire. Bankrolls Baron Mihail as a proxy against Ustrus. One of the Thirteen rules behind it.", "label": [200, 58] },
+    { "id": "mechil", "name": "Mechil", "kind": "empire",  "summary": "Northeastern empire. Has not moved on Veleh in about a hundred years. One of the Thirteen rules behind it.", "label": [640, 56] },
+    { "id": "ustrus", "name": "Ustrus", "kind": "empire",  "summary": "Southeastern empire, capital Beit Haifud. Overlord-by-proxy of Veleh. One of the Thirteen rules behind it.", "label": [400, 640] }
+  ],
+
+  "regions": [
+    { "id": "olta",   "name": "Olta",   "realm": "veleh", "label": [150, 262] },
+    { "id": "strova", "name": "Strova", "realm": "veleh", "label": [754, 500] }
+  ],
+
+  "places": [
+    { "id": "tullanon",  "name": "Tullanon",  "type": "town",     "realm": "veleh", "region": "olta", "x": 238, "y": 336, "page": "places/tullanon.html",
+      "summary": "Swamp city on rotting pillars over the Olta. Clams, fog, slums. Where the Hundred-Eleven recruited Alden.",
+      "links": ["the-rift", "the-grimoire", "trantar"] },
+    { "id": "the-rift",  "name": "The Rift",  "type": "fortress", "realm": "veleh", "x": 442, "y": 398, "label_pos": "above", "page": "places/the-rift.html",
+      "summary": "White kimberstone fortress at the meeting of the Olta and Krisen. Seven towers, one broken. Fell in 1487 AS.",
+      "links": ["the-silence", "fall-of-the-rift", "baron-mihail"] },
+    { "id": "ocristan",  "name": "Ocristan",  "type": "capital",  "realm": "veleh", "x": 606, "y": 318, "page": "places/ocristan.html",
+      "summary": "Walled capital of Veleh, seat of the council. Bought with Ustrus gold in 1487 AS.",
+      "links": ["baron-mihail", "elric", "the-thirteen"] },
+    { "id": "trantar",   "name": "Trantar",   "type": "town",     "realm": "veleh", "x": 96,  "y": 404, "page": "places/trantar.html",
+      "summary": "Bone-walled city on Veleh's western border. Where the peasant revolt broke in 1488 AS.",
+      "links": ["tullanon", "the-grimoire", "elric"] },
+    { "id": "vorn-danu", "name": "Vorn Danu crossing", "type": "crossing", "realm": "veleh", "x": 532, "y": 546, "label_pos": "below", "page": "places/vorn-danu.html",
+      "summary": "The great river dividing Veleh from Ustrus. Its main crossing stands on kimberstone legs.",
+      "links": ["the-silence", "ocristan", "the-rift"] }
+  ],
+
+  "people": [
+    { "id": "baron-mihail", "name": "Baron Mihail", "page": "people/baron-mihail.html", "realm": "veleh",
+      "summary": "Revenant baron bidding for the throne of Veleh, caught between three empires.",
+      "links": ["battle-of-crows-pass", "fall-of-the-rift", "ocristan", "the-thirteen"] },
+    { "id": "elric", "name": "Elric", "page": "people/elric.html", "realm": null,
+      "summary": "Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.",
+      "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] }
+  ],
+
+  "lore": [
+    { "id": "the-thirteen", "name": "The Thirteen", "page": "lore/the-thirteen.html",
+      "summary": "Thirteen nigh-immortals who rule through empires and war on each other. Prophesied to fall to the Last Dawn.",
+      "links": ["the-silence", "baron-mihail", "the-grimoire"] },
+    { "id": "the-grimoire", "name": "The Grimoire", "page": "lore/the-grimoire.html",
+      "summary": "Book bound in human skin. Binds the 111 men of the Hundred-Eleven. A will of its own.",
+      "links": ["elric", "tullanon", "the-thirteen"] }
+  ],
+
+  "events": [
+    { "id": "the-silence", "name": "The Silence", "year": 0, "page": "events/the-silence.html",
+      "summary": "The kimberstone builders vanish. Year zero of the common reckoning.",
+      "places": ["the-rift", "vorn-danu"], "people": [], "links": ["the-thirteen", "the-rift"] },
+    { "id": "rift-last-taken", "name": "The Rift's last capture before 1487", "year": 1187, "approx": true, "page": null,
+      "summary": "After this the Rift is said to be untakeable. By whom it was taken is not recorded.",
+      "places": ["the-rift"], "people": [], "links": [] },
+    { "id": "elric-crosses-the-sea", "name": "Elric crosses the Eastern Sea", "year": 1424, "approx": true, "page": null,
+      "summary": "Elric arrives from the uncharted east, twenty-one days at sea, tied to the mast.",
+      "places": [], "people": ["elric"], "links": [] },
+    { "id": "ustrus-suzerainty", "name": "Ustrus takes Veleh by proxy", "year": 1437, "approx": true, "page": null,
+      "summary": "Ustrus begins taxing Veleh through proxy politicians.",
+      "places": ["ocristan"], "people": [], "links": [] },
+    { "id": "battle-of-crows-pass", "name": "Battle of Crow's Pass", "year": 1472, "page": "events/battle-of-crows-pass.html",
+      "summary": "Mihail dies with three arrows in the chest, and comes back.",
+      "places": [], "people": ["baron-mihail"], "links": ["baron-mihail", "the-thirteen"] },
+    { "id": "death-of-the-king", "name": "Death of the last king of Veleh", "year": 1484, "page": null,
+      "summary": "Arrow through the throat; some say murder. A dozen barons raise levies.",
+      "places": ["ocristan"], "people": [], "links": [] },
+    { "id": "fall-of-the-rift", "name": "Fall of the Rift", "year": 1487, "page": "events/fall-of-the-rift.html",
+      "summary": "Mihail and the Hundred-Eleven take the fortress that could not fall.",
+      "places": ["the-rift"], "people": ["baron-mihail", "elric"], "links": ["the-rift", "baron-mihail", "the-grimoire"] }
+  ],
+
+  "roads": [
+    { "from": "trantar",  "to": "tullanon",  "bend": -0.08 },
+    { "from": "tullanon", "to": "the-rift",  "bend": 0.10 },
+    { "from": "the-rift", "to": "ocristan",  "bend": -0.12 },
+    { "from": "ocristan", "to": "vorn-danu", "bend": 0.10 }
+  ],
+
+  "routes": []
+}

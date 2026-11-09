@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas of the Silence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="atlas-page">
+
+<header class="top">
+  <a class="home" href="index.html">Atlas of the Silence</a>
+  <span class="year">Veleh and the seam of empires · 1488 AS</span>
+</header>
+
+<div class="atlas">
+  <div class="map-wrap">
+    <svg id="map" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Veleh and its neighbours">
+      <defs>
+        <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="paper" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="3" result="grain"/>
+          <feColorMatrix in="grain" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.27  0 0 0 0 0.16  0 0 0 0.16 0" result="tint"/>
+          <feComposite in="tint" in2="SourceGraphic" operator="in" result="t"/>
+          <feBlend in="SourceGraphic" in2="t" mode="multiply"/>
+        </filter>
+        <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+          <stop offset="60%" stop-color="#3b2a17" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#3b2a17" stop-opacity="0.45"/>
+        </radialGradient>
+        <pattern id="sea-lines" width="22" height="9" patternUnits="userSpaceOnUse">
+          <path d="M0 5 q 5.5 -3 11 0 t 11 0" fill="none" stroke="#5f6b62" stroke-width="0.6" opacity="0.45"/>
+        </pattern>
+
+        <g id="peak">
+          <path d="M-15 8 L-4 -11 L0 -5 L5 -14 L16 8" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M5 -14 L3 -4 M8 -8 L6 2 M11 -2 L9.5 6 M-4 -11 L-5 -2 M-1.5 -6 L-2.5 3" stroke="#2b2219" stroke-width="0.7" opacity="0.7"/>
+        </g>
+        <g id="hill">
+          <path d="M-12 5 Q 0 -9 12 5" fill="none" stroke="#2b2219" stroke-width="1.2"/>
+          <path d="M3 -2 L1 4 M6 0 L4.5 5" stroke="#2b2219" stroke-width="0.6" opacity="0.7"/>
+        </g>
+        <g id="tree">
+          <path d="M0 7 L0 2" stroke="#2b2219" stroke-width="1"/>
+          <path d="M-5 3 C -8 -3, -3 -9, 0 -8 C 4 -9, 8 -3, 5 3 Z" fill="#cdbd92" stroke="#2b2219" stroke-width="1"/>
+        </g>
+        <g id="tuft">
+          <path d="M-6 3 L6 3 M-4 3 L-5 -3 M-1 3 L-1 -5 M2 3 L3 -4 M5 3 L6 -1" stroke="#4d5a49" stroke-width="0.9" fill="none"/>
+        </g>
+      </defs>
+
+      <!-- parchment ground -->
+      <rect x="-500" y="-500" width="2000" height="1700" fill="#0d0c0a"/>
+      <rect x="0" y="0" width="1000" height="700" fill="#e2d3ae" filter="url(#paper)"/>
+
+      <!-- ================= TERRAIN ================= -->
+      <g id="layer-terrain">
+        <!-- Eastern Sea -->
+        <g filter="url(#rough)">
+          <path id="sea" d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 L1000 700 L1000 0 Z"
+                fill="#c9c3a1"/>
+          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 L1000 700 L1000 0 Z"
+                fill="url(#sea-lines)"/>
+          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+                fill="none" stroke="#2b2219" stroke-width="1.8"/>
+          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+                fill="none" stroke="#2b2219" stroke-width="0.7" opacity="0.4" transform="translate(9 0)"/>
+          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+                fill="none" stroke="#2b2219" stroke-width="0.5" opacity="0.25" transform="translate(18 0)"/>
+        </g>
+
+        <!-- Rivers -->
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
+          <path id="r-vorn" d="M-10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
+                stroke="#2b2219" stroke-width="7.5"/>
+          <path d="M-10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
+                stroke="#8fa39b" stroke-width="5"/>
+          <path d="M758 382 C770 394, 784 398, 799 400 M764 379 C776 366, 789 360, 800 352 M772 381 C782 386, 790 384, 800 384" stroke="#2b2219" stroke-width="1.6"/>
+
+          <path id="r-olta" d="M150 90 C170 150, 200 200, 215 260 C225 300, 240 330, 270 345 C320 368, 380 374, 420 384 C440 389, 455 396, 468 402 C495 420, 520 450, 540 490 C552 515, 560 535, 565 549"
+                stroke="#2b2219" stroke-width="4.4"/>
+          <path d="M150 90 C170 150, 200 200, 215 260 C225 300, 240 330, 270 345 C320 368, 380 374, 420 384 C440 389, 455 396, 468 402 C495 420, 520 450, 540 490 C552 515, 560 535, 565 549"
+                stroke="#8fa39b" stroke-width="2.4"/>
+
+          <path id="r-krisen" d="M250 520 C300 500, 350 470, 390 440 C412 423, 438 412, 468 402"
+                stroke="#2b2219" stroke-width="3.8"/>
+          <path d="M250 520 C300 500, 350 470, 390 440 C412 423, 438 412, 468 402"
+                stroke="#8fa39b" stroke-width="2"/>
+
+          <path id="r-trantar" d="M58 296 C78 340, 102 380, 98 420 C94 462, 112 505, 122 566"
+                stroke="#2b2219" stroke-width="3"/>
+          <path d="M58 296 C78 340, 102 380, 98 420 C94 462, 112 505, 122 566"
+                stroke="#8fa39b" stroke-width="1.4"/>
+        </g>
+
+        <!-- Northern range -->
+        <g filter="url(#rough)">
+          <use href="#peak" transform="translate(110 162) scale(0.8)"/>
+          <use href="#peak" transform="translate(170 122) scale(0.9)"/>
+          <use href="#peak" transform="translate(240 102) scale(0.85)"/>
+          <use href="#peak" transform="translate(320 94) scale(0.9)"/>
+          <use href="#peak" transform="translate(400 98) scale(0.8)"/>
+          <use href="#peak" transform="translate(480 106) scale(0.85)"/>
+          <use href="#peak" transform="translate(560 114) scale(0.8)"/>
+          <use href="#peak" transform="translate(640 122) scale(0.85)"/>
+          <use href="#peak" transform="translate(70 236) scale(0.9)"/>
+          <use href="#peak" transform="translate(95 210)"/>
+          <use href="#peak" transform="translate(122 188) scale(1.1)"/>
+          <use href="#peak" transform="translate(186 150) scale(1.2)"/>
+          <use href="#peak" transform="translate(222 138)"/>
+          <use href="#peak" transform="translate(262 128) scale(1.1)"/>
+          <use href="#peak" transform="translate(302 120) scale(1.25)"/>
+          <use href="#peak" transform="translate(342 120)"/>
+          <use href="#peak" transform="translate(382 124) scale(1.15)"/>
+          <use href="#peak" transform="translate(422 128)"/>
+          <use href="#peak" transform="translate(462 132) scale(1.1)"/>
+          <use href="#peak" transform="translate(502 138)"/>
+          <use href="#peak" transform="translate(542 144) scale(1.15)"/>
+          <use href="#peak" transform="translate(582 152)"/>
+          <use href="#peak" transform="translate(622 158) scale(1.1)"/>
+          <use href="#peak" transform="translate(662 150)"/>
+          <use href="#peak" transform="translate(702 140) scale(0.9)"/>
+        </g>
+
+        <!-- Hills: Krisen headwaters, Ustrus uplands -->
+        <g filter="url(#rough)">
+          <use href="#hill" transform="translate(232 508)"/>
+          <use href="#hill" transform="translate(258 498) scale(0.8)"/>
+          <use href="#hill" transform="translate(214 492) scale(0.7)"/>
+          <use href="#hill" transform="translate(52 300) scale(0.8)"/>
+          <use href="#hill" transform="translate(280 612)"/>
+          <use href="#hill" transform="translate(312 624) scale(0.8)"/>
+          <use href="#hill" transform="translate(540 618)"/>
+          <use href="#hill" transform="translate(570 606) scale(0.9)"/>
+          <use href="#hill" transform="translate(600 624) scale(0.8)"/>
+          <use href="#hill" transform="translate(150 640) scale(0.9)"/>
+        </g>
+
+        <!-- Forests -->
+        <g filter="url(#rough)">
+          <use href="#tree" x="292" y="412"/><use href="#tree" x="305" y="402"/><use href="#tree" x="318" y="414"/>
+          <use href="#tree" x="331" y="400"/><use href="#tree" x="344" y="414"/><use href="#tree" x="300" y="428"/>
+          <use href="#tree" x="314" y="430"/><use href="#tree" x="328" y="428"/><use href="#tree" x="355" y="428"/>
+          <use href="#tree" x="340" y="442"/><use href="#tree" x="368" y="414"/>
+
+          <use href="#tree" x="512" y="262"/><use href="#tree" x="526" y="252"/><use href="#tree" x="540" y="266"/>
+          <use href="#tree" x="524" y="278"/><use href="#tree" x="552" y="254"/><use href="#tree" x="538" y="240"/>
+
+          <use href="#tree" x="676" y="248"/><use href="#tree" x="690" y="238"/><use href="#tree" x="704" y="252"/>
+          <use href="#tree" x="688" y="262"/><use href="#tree" x="718" y="240"/>
+
+          <use href="#tree" x="150" y="440"/><use href="#tree" x="164" y="452"/><use href="#tree" x="140" y="458"/>
+          <use href="#tree" x="176" y="438"/>
+        </g>
+
+        <!-- Swamps of Olta -->
+        <g>
+          <use href="#tuft" x="206" y="314"/><use href="#tuft" x="196" y="340"/><use href="#tuft" x="221" y="356"/>
+          <use href="#tuft" x="258" y="358"/><use href="#tuft" x="270" y="322"/><use href="#tuft" x="282" y="342"/>
+          <use href="#tuft" x="242" y="372"/><use href="#tuft" x="214" y="296"/><use href="#tuft" x="186" y="322"/>
+          <use href="#tuft" x="268" y="372"/>
+        </g>
+
+        <!-- Compass -->
+        <g transform="translate(912 604)" fill="none" stroke="#2b2219">
+          <circle r="28" stroke-width="0.8"/>
+          <circle r="22" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <path d="M0 -34 L6 0 L0 34 L-6 0 Z" fill="#2b2219" stroke-width="0.6"/>
+          <path d="M-34 0 L0 5 L34 0 L0 -5 Z" fill="#e2d3ae" stroke-width="0.8"/>
+          <text y="-38" text-anchor="middle" fill="#2b2219" stroke="none" font-family="IM Fell English SC, Georgia, serif" font-size="12">N</text>
+        </g>
+
+        <!-- Cartouche -->
+        <g transform="translate(22 646)">
+          <rect width="250" height="40" fill="#e2d3ae" stroke="#2b2219" stroke-width="1"/>
+          <rect x="3" y="3" width="244" height="34" fill="none" stroke="#2b2219" stroke-width="0.5"/>
+          <text x="125" y="18" text-anchor="middle" font-family="IM Fell English SC, Georgia, serif" font-size="13" fill="#2b2219">Veleh &amp; the Seam of Empires</text>
+          <text x="125" y="32" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="10.5" fill="#2b2219">as it stood in the year 1488 after the Silence</text>
+        </g>
+      </g>
+
+      <!-- ================= BORDERS ================= -->
+      <g id="layer-borders" fill="none" stroke="#7a2a1e" stroke-width="1.6" stroke-dasharray="7 4 1.5 4" opacity="0.85" filter="url(#rough)">
+        <path d="M30 562 C25 480, 35 380, 40 300 C50 240, 90 200, 140 185 C220 165, 330 160, 450 168 C540 172, 600 188, 660 182 C720 178, 760 172, 793 170"/>
+        <path d="M682 553 C720 565, 760 575, 797 588"/>
+        <path d="M450 168 C440 120, 455 60, 445 0"/>
+      </g>
+
+      <!-- ================= ROADS ================= -->
+      <g id="layer-roads" fill="none" stroke="#6b4a2b" stroke-width="1.4" stroke-dasharray="3 3" stroke-linecap="round">
+<!-- BEGIN:roads -->
+        <path d="M96 404 Q162 359 238 336"><title>Road: trantar – tullanon</title></path>
+        <path d="M238 336 Q334 387 442 398"><title>Road: tullanon – the-rift</title></path>
+        <path d="M442 398 Q514 338 606 318"><title>Road: the-rift – ocristan</title></path>
+        <path d="M606 318 Q546 425 532 546"><title>Road: ocristan – vorn-danu</title></path>
+<!-- END:roads -->
+      </g>
+
+      <!-- ================= LABELS ================= -->
+      <g id="layer-labels" fill="#2b2219" font-family="IM Fell English SC, Georgia, serif">
+        <g font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="12" fill="#3f5550">
+          <text dy="-6"><textPath href="#r-vorn" startOffset="22%">Vorn Danu</textPath></text>
+          <text dy="-5"><textPath href="#r-vorn" startOffset="62%">Vorn Danu</textPath></text>
+          <text dy="-5" font-size="10.5"><textPath href="#r-olta" startOffset="18%">Olta</textPath></text>
+          <text dy="12" font-size="10.5"><textPath href="#r-olta" startOffset="83%">Olta</textPath></text>
+          <text dy="11" font-size="10.5"><textPath href="#r-krisen" startOffset="22%">Krisen</textPath></text>
+        </g>
+        <text x="905" y="340" font-size="20" letter-spacing="8" fill="#3f5550" transform="rotate(90 905 340)" text-anchor="middle">Eastern Sea</text>
+        <text x="935" y="70" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">beyond the sea:</text>
+        <text x="935" y="84" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">the wild lands, uncharted</text>
+        <text x="655" y="678" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11.5" text-anchor="middle">to Beit Haifud, many days south-east ↘</text>
+<!-- BEGIN:labels -->
+        <text x="380" y="268" font-size="26" letter-spacing="14" text-anchor="middle" opacity="0.75">VELEH</text>
+        <text x="200" y="58" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">BLORIA</text>
+        <text x="640" y="56" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">MECHIL</text>
+        <text x="400" y="640" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">USTRUS</text>
+        <text x="150" y="262" font-size="12" letter-spacing="3" text-anchor="middle" opacity="0.6" font-style="italic">OLTA</text>
+        <text x="754" y="500" font-size="12" letter-spacing="3" text-anchor="middle" opacity="0.6" font-style="italic">STROVA</text>
+        <text x="250" y="340" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Tullanon</text>
+        <text x="442" y="385" font-size="14" text-anchor="middle" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">The Rift</text>
+        <text x="618" y="322" font-size="16" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Ocristan</text>
+        <text x="108" y="408" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Trantar</text>
+        <text x="532" y="567" font-size="14" text-anchor="middle" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Vorn Danu crossing</text>
+<!-- END:labels -->
+      </g>
+
+      <!-- ================= MARKERS ================= -->
+      <g id="layer-markers">
+<!-- BEGIN:markers -->
+        <g transform="translate(238 336)"><a href="places/tullanon.html" class="marker" aria-label="Tullanon"><title>Tullanon</title><circle r="15" fill="transparent"/><g class="glyph"><circle r="5.2" fill="#2b2219"/><circle r="2.1" fill="#e2d3ae"/></g></a></g>
+        <g transform="translate(442 398)"><a href="places/the-rift.html" class="marker" aria-label="The Rift"><title>The Rift</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M-6.5 6.5 V-4 H-4.5 V-7.5 H-1.8 V-4 H1.8 V-7.5 H4.5 V-4 H6.5 V6.5 Z" fill="#f6f1e3" stroke="#2b2219" stroke-width="1.2" stroke-linejoin="round"/><path d="M-1.6 6.5 V2.5 A1.6 1.6 0 0 1 1.6 2.5 V6.5" fill="#2b2219"/></g></a></g>
+        <g transform="translate(606 318)"><a href="places/ocristan.html" class="marker" aria-label="Ocristan"><title>Ocristan</title><circle r="15" fill="transparent"/><g class="glyph"><circle r="9.5" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/><circle r="5" fill="#8e2a20" stroke="#2b2219" stroke-width="1"/></g></a></g>
+        <g transform="translate(96 404)"><a href="places/trantar.html" class="marker" aria-label="Trantar"><title>Trantar</title><circle r="15" fill="transparent"/><g class="glyph"><circle r="5.2" fill="#2b2219"/><circle r="2.1" fill="#e2d3ae"/></g></a></g>
+        <g transform="translate(532 546)"><a href="places/vorn-danu.html" class="marker" aria-label="Vorn Danu crossing"><title>Vorn Danu crossing</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M-10 3 Q0 -7 10 3" fill="none" stroke="#2b2219" stroke-width="2.4"/><path d="M-5 0 V5 M0 -2 V5 M5 0 V5" stroke="#2b2219" stroke-width="1.3"/></g></a></g>
+<!-- END:markers -->
+      </g>
+
+      <rect x="0" y="0" width="1000" height="700" fill="url(#vignette)" pointer-events="none"/>
+    </svg>
+
+    <div class="map-controls">
+      <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+      <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+      <button type="button" id="zoom-reset" aria-label="Reset view">⟲</button>
+    </div>
+
+    <div class="layers">
+      <label><input type="checkbox" data-layer="layer-terrain" checked> Terrain</label>
+      <label><input type="checkbox" data-layer="layer-borders" checked> Borders</label>
+      <label><input type="checkbox" data-layer="layer-roads" checked> Roads</label>
+      <label><input type="checkbox" data-layer="layer-labels" checked> Labels</label>
+      <label><input type="checkbox" data-layer="layer-markers" checked> Places</label>
+    </div>
+  </div>
+
+  <aside class="codex">
+<!-- BEGIN:codex -->
+    <p class="intro">Drag to pan, scroll to zoom. Hover a marker for its name; click to open it.</p>
+    <h2>Places</h2>
+    <ul>
+      <li><a href="places/ocristan.html" title="Walled capital of Veleh, seat of the council. Bought with Ustrus gold in 1487 AS.">Ocristan</a></li>
+      <li><a href="places/the-rift.html" title="White kimberstone fortress at the meeting of the Olta and Krisen. Seven towers, one broken. Fell in 1487 AS.">The Rift</a></li>
+      <li><a href="places/trantar.html" title="Bone-walled city on Veleh&#x27;s western border. Where the peasant revolt broke in 1488 AS.">Trantar</a></li>
+      <li><a href="places/tullanon.html" title="Swamp city on rotting pillars over the Olta. Clams, fog, slums. Where the Hundred-Eleven recruited Alden.">Tullanon</a></li>
+      <li><a href="places/vorn-danu.html" title="The great river dividing Veleh from Ustrus. Its main crossing stands on kimberstone legs.">Vorn Danu crossing</a></li>
+    </ul>
+    <h2>People</h2>
+    <ul>
+      <li><a href="people/baron-mihail.html" title="Revenant baron bidding for the throne of Veleh, caught between three empires.">Baron Mihail</a></li>
+      <li><a href="people/elric.html" title="Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.">Elric</a></li>
+    </ul>
+    <h2>Lore</h2>
+    <ul>
+      <li><a href="lore/the-grimoire.html" title="Book bound in human skin. Binds the 111 men of the Hundred-Eleven. A will of its own.">The Grimoire</a></li>
+      <li><a href="lore/the-thirteen.html" title="Thirteen nigh-immortals who rule through empires and war on each other. Prophesied to fall to the Last Dawn.">The Thirteen</a></li>
+    </ul>
+    <h2>Chronicle</h2>
+    <ul>
+      <li><span class="yr">0 AS</span><a href="events/the-silence.html" title="The kimberstone builders vanish. Year zero of the common reckoning.">The Silence</a></li>
+      <li><span class="yr">c. 1187 AS</span><span class="unconfirmed">The Rift&#x27;s last capture before 1487</span></li>
+      <li><span class="yr">c. 1424 AS</span><span class="unconfirmed">Elric crosses the Eastern Sea</span></li>
+      <li><span class="yr">c. 1437 AS</span><span class="unconfirmed">Ustrus takes Veleh by proxy</span></li>
+      <li><span class="yr">1472 AS</span><a href="events/battle-of-crows-pass.html" title="Mihail dies with three arrows in the chest, and comes back.">Battle of Crow&#x27;s Pass</a></li>
+      <li><span class="yr">1484 AS</span><span class="unconfirmed">Death of the last king of Veleh</span></li>
+      <li><span class="yr">1487 AS</span><a href="events/fall-of-the-rift.html" title="Mihail and the Hundred-Eleven take the fortress that could not fall.">Fall of the Rift</a></li>
+    </ul>
+<!-- END:codex -->
+  </aside>
+</div>
+
+<script>
+(() => {
+  const svg = document.getElementById('map');
+  const FULL = { x: 0, y: 0, w: 1000, h: 700 };
+  const MIN_W = 140;
+  let vb = { ...FULL };
+
+  const apply = () => svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+  const clamp = () => {
+    vb.w = Math.min(FULL.w, Math.max(MIN_W, vb.w));
+    vb.h = vb.w * FULL.h / FULL.w;
+    vb.x = Math.min(FULL.w - vb.w * 0.5, Math.max(-vb.w * 0.5, vb.x));
+    vb.y = Math.min(FULL.h - vb.h * 0.5, Math.max(-vb.h * 0.5, vb.y));
+  };
+  const toSvg = (cx, cy) => {
+    const p = new DOMPoint(cx, cy).matrixTransform(svg.getScreenCTM().inverse());
+    return { x: p.x, y: p.y };
+  };
+  const zoomAt = (factor, cx, cy) => {
+    const p = cx == null ? { x: vb.x + vb.w / 2, y: vb.y + vb.h / 2 } : toSvg(cx, cy);
+    const nw = Math.min(FULL.w, Math.max(MIN_W, vb.w * factor));
+    const k = nw / vb.w;
+    vb.x = p.x - (p.x - vb.x) * k;
+    vb.y = p.y - (p.y - vb.y) * k;
+    vb.w = nw;
+    clamp(); apply();
+  };
+
+  svg.addEventListener('wheel', e => {
+    e.preventDefault();
+    zoomAt(e.deltaY > 0 ? 1.15 : 1 / 1.15, e.clientX, e.clientY);
+  }, { passive: false });
+
+  let drag = null, moved = false;
+  svg.addEventListener('pointerdown', e => {
+    if (e.button !== 0) return;
+    drag = { x: e.clientX, y: e.clientY, vx: vb.x, vy: vb.y, id: e.pointerId };
+    moved = false;
+  });
+  svg.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (!moved && Math.hypot(dx, dy) < 5) return;
+    if (!moved) { moved = true; svg.setPointerCapture(drag.id); svg.classList.add('dragging'); }
+    const k = 1 / svg.getScreenCTM().a;
+    vb.x = drag.vx - dx * k;
+    vb.y = drag.vy - dy * k;
+    clamp(); apply();
+  });
+  const end = () => { drag = null; svg.classList.remove('dragging'); };
+  svg.addEventListener('pointerup', end);
+  svg.addEventListener('pointercancel', end);
+  svg.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+
+  document.getElementById('zoom-in').onclick = () => zoomAt(1 / 1.4);
+  document.getElementById('zoom-out').onclick = () => zoomAt(1.4);
+  document.getElementById('zoom-reset').onclick = () => { vb = { ...FULL }; apply(); };
+
+  document.querySelectorAll('.layers input').forEach(cb => {
+    const g = document.getElementById(cb.dataset.layer);
+    cb.addEventListener('change', () => { g.style.display = cb.checked ? '' : 'none'; });
+  });
+})();
+</script>
+</body>
+</html>
