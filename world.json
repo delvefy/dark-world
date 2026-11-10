@@ -22,7 +22,7 @@
 
   "realms": [
     { "id": "veleh",  "name": "Veleh",  "kind": "kingdom", "summary": "Fractured kingdom in the seam between three empires. Capital Ocristan. Ustrus has held it by proxy for about fifty years.", "label": [380, 268] },
-    { "id": "bloria", "name": "Bloria", "kind": "empire",  "summary": "Northwestern empire. Bankrolls Baron Mihail as a proxy against Ustrus. One of the Thirteen rules behind it.", "label": [200, 58] },
+    { "id": "bloria", "name": "Bloria", "kind": "empire",  "summary": "Northwestern empire. Bankrolls Baron Mihail as a proxy against Ustrus. One of the Thirteen rules behind it: the Lady of the Ledger, by common belief.", "label": [200, 58] },
     { "id": "mechil", "name": "Mechil", "kind": "empire",  "summary": "Northeastern empire. Has not moved on Veleh in about a hundred years. One of the Thirteen rules behind it.", "label": [640, 56] },
     { "id": "ustrus", "name": "Ustrus", "kind": "empire",  "summary": "Southeastern empire, capital Beit Haifud. Overlord-by-proxy of Veleh. One of the Thirteen rules behind it.", "label": [400, 640] }
   ],
@@ -56,7 +56,13 @@
       "links": ["trantar", "olegzander", "ocristan", "blackmire"] },
     { "id": "crows-pass", "name": "Crow's Pass", "type": "pass", "realm": "veleh", "x": 152, "y": 212, "label_pos": "left", "page": "places/crows-pass.html",
       "summary": "High saddle on the Bloria border under a freestanding kimberstone arch. Mihail died and was raised on its sill in 1472 AS; his household has held it since.",
-      "links": ["battle-of-crows-pass", "baron-mihail", "blackmire", "kimberstone", "haldevin", "edrun-vasselt"] }
+      "links": ["battle-of-crows-pass", "baron-mihail", "blackmire", "kimberstone", "haldevin", "edrun-vasselt"] },
+    { "id": "kalderhof", "name": "Kalderhof", "type": "estate", "realm": "bloria", "x": 330, "y": 50, "page": "places/kalderhof.html",
+      "summary": "Walled crown estate on the northern moors of Bloria where the Ostvald lower bond ends. Named by everyone, visited by no one. Said to spend debtors a year at a time; sends out only ash.",
+      "links": ["the-ostvald-houses", "edrun-vasselt", "blackmire", "the-thirteen", "baron-mihail"] },
+    { "id": "vadra", "name": "Vadra", "type": "town", "realm": "veleh", "region": "strova", "x": 778, "y": 455, "label_pos": "above", "page": "places/vadra.html",
+      "summary": "Lordless fishing town on the Strova coast, run by a compact of boat-owners called the Benches. Landed the Ustrus gold in 1487 AS; buried the galley dead that washed up after, and kept eleven Counting-House tallies cut from their collars.",
+      "links": ["the-gold-run", "the-counting-house", "ocristan", "vorn-danu", "baron-mihail"] }
   ],
 
   "people": [
@@ -74,7 +80,10 @@
       "links": ["the-gold-run", "the-counting-house", "baron-mihail", "the-thirteen", "olegzander", "elric", "edrun-vasselt"] },
     { "id": "edrun-vasselt", "name": "Edrun Vasselt", "page": "people/edrun-vasselt.html", "realm": "bloria",
       "summary": "Bloria's factor in Ocristan; pays Mihail in blood-sealed bills. Bought a copy of the Ustrus loan terms and sold his silence to Mihail instead of sending it home.",
-      "links": ["baron-mihail", "tamarun", "ocristan", "the-gold-run", "the-mechil-embassy"] },
+      "links": ["baron-mihail", "tamarun", "ocristan", "the-gold-run", "the-mechil-embassy", "wendel-raust", "the-drowned-clerk"] },
+    { "id": "wendel-raust", "name": "Wendel Raust", "page": "people/wendel-raust.html", "realm": "bloria",
+      "summary": "Ostvald reckoner, the gray rider. Audited Edrun Vasselt's books in Ocristan over the winter of 1487 AS and offered the Hundred-Eleven a second contract with the houses. Elric refused; Raust left by the west gate.",
+      "links": ["edrun-vasselt", "elric", "the-ostvald-houses", "ocristan", "baron-mihail", "kalderhof"] },
     { "id": "elric", "name": "Elric", "page": "people/elric.html", "realm": null,
       "summary": "Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.",
       "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] },
@@ -86,7 +95,7 @@
   "lore": [
     { "id": "the-thirteen", "name": "The Thirteen", "page": "lore/the-thirteen.html",
       "summary": "Thirteen nigh-immortals who rule through empires and war on each other. Prophesied to fall to the Last Dawn.",
-      "links": ["the-silence", "baron-mihail", "the-grimoire"] },
+      "links": ["the-silence", "baron-mihail", "the-grimoire", "the-lady-of-the-ledger"] },
     { "id": "the-grimoire", "name": "The Grimoire", "page": "lore/the-grimoire.html",
       "summary": "Book bound in human skin. Binds the 111 men of the Hundred-Eleven. A will of its own.",
       "links": ["elric", "tullanon", "the-thirteen"] },
@@ -101,7 +110,10 @@
       "links": ["the-thirteen", "the-silence", "baron-mihail"] },
     { "id": "the-ostvald-houses", "name": "The Ostvald Houses", "page": "lore/the-ostvald-houses.html",
       "summary": "Bloria's banking families. Lend to crown and lords on terms that cannot be met, take people in bond, seal their bills in debtors' blood. Long-held debtors go north by night and do not return.",
-      "links": ["edrun-vasselt", "the-counting-house", "the-thirteen", "baron-mihail"] }
+      "links": ["edrun-vasselt", "the-counting-house", "the-thirteen", "baron-mihail", "kalderhof", "the-lady-of-the-ledger"] },
+    { "id": "the-lady-of-the-ledger", "name": "The Lady of the Ledger", "page": "lore/the-lady-of-the-ledger.html",
+      "summary": "Bloria's one of the Thirteen, as Blorians name it: a woman of middle years who has held the crown's book of debts at every coronation in the rolls, under a new name and office each reign. In 1488 AS taken to be Lady Hedwen, Mistress of the Privy Roll.",
+      "links": ["the-thirteen", "the-ostvald-houses", "kalderhof", "wendel-raust", "edrun-vasselt", "baron-mihail"] }
   ],
 
   "events": [
@@ -137,13 +149,16 @@
       "places": ["ocristan"], "people": ["olegzander", "baron-mihail", "elric"], "links": ["olegzander", "fall-of-the-rift", "ocristan", "baron-mihail", "the-gold-run", "the-grimoire"] },
     { "id": "the-gold-run", "name": "The Gold Run", "year": 1487, "page": "events/the-gold-run.html",
       "summary": "Mihail's journey to Beit Haifud and back with an Ustrus loan in gold. Hunted by bloodhounds and galleys sent from inside Ustrus.",
-      "places": ["vorn-danu", "ocristan"], "people": ["baron-mihail", "elric"], "links": ["baron-mihail", "elric", "the-thirteen", "olegzander", "the-grimoire"] },
+      "places": ["vorn-danu", "ocristan", "vadra"], "people": ["baron-mihail", "elric"], "links": ["baron-mihail", "elric", "the-thirteen", "olegzander", "the-grimoire", "vadra"] },
     { "id": "haldevin-burned", "name": "Burning of Haldevin", "year": 1488, "page": null,
       "summary": "After Trantar the tax riders return with soldiers, burn the village and take its church register.",
       "places": ["haldevin"], "people": [], "links": ["haldevin", "trantar"] },
     { "id": "the-mechil-embassy", "name": "The Mechil Embassy", "year": 1488, "page": "events/the-mechil-embassy.html",
       "summary": "While Trantar burns, Mihail rides east in secret and offers to default on the Ustrus loan if Mechil will stand behind him. The envoys listen and give no answer.",
-      "places": [], "people": ["baron-mihail"], "links": ["baron-mihail", "trantar", "the-gold-run", "the-counting-house", "the-thirteen", "elric"] }
+      "places": [], "people": ["baron-mihail"], "links": ["baron-mihail", "trantar", "the-gold-run", "the-counting-house", "the-thirteen", "elric"] },
+    { "id": "the-drowned-clerk", "name": "The Drowned Clerk", "year": 1487, "page": "events/the-drowned-clerk.html",
+      "summary": "Iacob Serdan, the chancery clerk who sold Vasselt a copy of the Ustrus loan terms, is found in Ocristan's town ditch. Self-drowned, by the wardens' finding; his note says he sold the terms twice.",
+      "places": ["ocristan"], "people": ["edrun-vasselt", "baron-mihail"], "links": ["edrun-vasselt", "the-gold-run", "wendel-raust", "ocristan", "the-counting-house", "the-mechil-embassy"] }
   ],
 
   "roads": [
