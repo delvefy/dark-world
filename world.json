@@ -4,11 +4,14 @@
     "tone": "grim",
     "voice": "neutral reference",
     "source_novel": "~/work/writing/111 (Meta.MD, Chapters/)",
-    "map_viewbox": [0, 0, 1000, 700],
+    "map_viewbox": [-300, -300, 1400, 1200],
     "author_notes": [
       "The Last Dawn's return lies roughly 400 years after the 1487-1488 AS events (c. 1900 AS). No page states this; in-world nobody knows when. No 1488 AS figure (Mihail, Elric, etc.) is the Last Dawn.",
       "Direction: when the Ustrus creditors come to Ocristan, Mihail plays for time. He pays a little, stalls, and keeps all three empires guessing; nothing settles in 1488 AS.",
-      "Next run: grow Bloria (its court, who pays Mihail, its one of the Thirteen)."
+      "Bloria grown in run 2 (Aldrecht, Hollmar, blood-seals). Canvas grown to x -300..1100, y -300..900 after run 2; Kalderhof now sits well north of Aldrecht.",
+      "Tamarun's unmarked name in the Margin is not a death mark: the hand is deciding whether to use him. He stays emperor for now. No page says this.",
+      "The old Rookery brother who struck a bill stays unconfirmed as Kaspar Hollmar on every page.",
+      "Next run: grow western Veleh (Tullanon, the Olta, Trantar's villages, why the Hundred-Eleven recruits there)."
     ]
   },
 
@@ -22,9 +25,9 @@
 
   "realms": [
     { "id": "veleh",  "name": "Veleh",  "kind": "kingdom", "summary": "Fractured kingdom in the seam between three empires. Capital Ocristan. Ustrus has held it by proxy for about fifty years.", "label": [380, 268] },
-    { "id": "bloria", "name": "Bloria", "kind": "empire",  "summary": "Northwestern empire. Bankrolls Baron Mihail as a proxy against Ustrus. One of the Thirteen rules behind it: the Lady of the Ledger, by common belief.", "label": [200, 58] },
-    { "id": "mechil", "name": "Mechil", "kind": "empire",  "summary": "Northeastern empire. Has not moved on Veleh in about a hundred years. One of the Thirteen rules behind it.", "label": [640, 56] },
-    { "id": "ustrus", "name": "Ustrus", "kind": "empire",  "summary": "Southeastern empire, capital Beit Haifud. Overlord-by-proxy of Veleh. One of the Thirteen rules behind it.", "label": [400, 640] }
+    { "id": "bloria", "name": "Bloria", "kind": "empire",  "summary": "Northwestern empire, capital Aldrecht. Bankrolls Baron Mihail as a proxy against Ustrus. One of the Thirteen rules behind it: the Lady of the Ledger, by common belief.", "label": [190, -140] },
+    { "id": "mechil", "name": "Mechil", "kind": "empire",  "summary": "Northeastern empire. Has not moved on Veleh in about a hundred years. One of the Thirteen rules behind it.", "label": [640, -150] },
+    { "id": "ustrus", "name": "Ustrus", "kind": "empire",  "summary": "Southeastern empire, capital Beit Haifud. Overlord-by-proxy of Veleh. One of the Thirteen rules behind it.", "label": [400, 760] }
   ],
 
   "regions": [
@@ -57,9 +60,15 @@
     { "id": "crows-pass", "name": "Crow's Pass", "type": "pass", "realm": "veleh", "x": 152, "y": 212, "label_pos": "left", "page": "places/crows-pass.html",
       "summary": "High saddle on the Bloria border under a freestanding kimberstone arch. Mihail died and was raised on its sill in 1472 AS; his household has held it since.",
       "links": ["battle-of-crows-pass", "baron-mihail", "blackmire", "kimberstone", "haldevin", "edrun-vasselt"] },
-    { "id": "kalderhof", "name": "Kalderhof", "type": "estate", "realm": "bloria", "x": 330, "y": 50, "page": "places/kalderhof.html",
+    { "id": "kalderhof", "name": "Kalderhof", "type": "estate", "realm": "bloria", "x": 330, "y": -200, "page": "places/kalderhof.html",
       "summary": "Walled crown estate on the northern moors of Bloria where the Ostvald lower bond ends. Named by everyone, visited by no one. Said to spend debtors a year at a time; sends out only ash.",
       "links": ["the-ostvald-houses", "edrun-vasselt", "blackmire", "the-thirteen", "baron-mihail"] },
+    { "id": "aldrecht", "name": "Aldrecht", "type": "capital", "realm": "bloria", "x": 132, "y": 92, "label_pos": "left", "page": "places/aldrecht.html",
+      "summary": "Walled crown city of Bloria at the springs of the Olta. The Burg, the Ostvald exchange, the great Bond. Twice besieged by Ustrus, never taken. Seat of the old king Eberwin III.",
+      "links": ["the-ostvald-houses", "the-lady-of-the-ledger", "kalderhof", "crows-pass", "edrun-vasselt", "baron-mihail", "wendel-raust", "tullanon"] },
+    { "id": "the-rookery", "name": "The Rookery", "type": "monastery", "realm": "veleh", "x": 708, "y": 214, "label_pos": "left", "page": "places/the-rookery.html",
+      "summary": "Monastery of a mute order in the north-eastern forest, a day from the Mechil border, ringed by a vast crow roost. Untaxed, untouched by Mechil. Where Mihail met Mechil's envoys in 1488 AS. Held in the north-east to be where Mechil listens to the crows.",
+      "links": ["the-mechil-embassy", "trantar", "crows-pass", "baron-mihail", "ocristan", "the-thirteen"] },
     { "id": "vadra", "name": "Vadra", "type": "town", "realm": "veleh", "region": "strova", "x": 778, "y": 455, "label_pos": "above", "page": "places/vadra.html",
       "summary": "Lordless fishing town on the Strova coast, run by a compact of boat-owners called the Benches. Landed the Ustrus gold in 1487 AS; buried the galley dead that washed up after, and kept eleven Counting-House tallies cut from their collars.",
       "links": ["the-gold-run", "the-counting-house", "ocristan", "vorn-danu", "baron-mihail"] }
@@ -70,8 +79,8 @@
       "summary": "Revenant baron bidding for the throne of Veleh, caught between three empires.",
       "links": ["battle-of-crows-pass", "fall-of-the-rift", "ocristan", "the-thirteen", "blackmire"] },
     { "id": "lord-andrej", "name": "Lord Andrej", "page": "people/lord-andrej.html", "realm": "veleh",
-      "summary": "Last lord of the Rift. Held it five weeks against Mihail's larger army; lost it when the Hundred-Eleven opened the gate from inside. Died caged in the sun, 1487 AS.",
-      "links": ["the-rift", "fall-of-the-rift", "baron-mihail", "olegzander"] },
+      "summary": "Last lord of the Rift. Held it five weeks against Mihail's larger army; lost it when the Hundred-Eleven opened the gate from inside. Died caged in the sun, 1487 AS. His children are Mihail's wards.",
+      "links": ["the-rift", "fall-of-the-rift", "baron-mihail", "olegzander", "ilinca"] },
     { "id": "aran", "name": "Aran", "page": "people/aran.html", "realm": null,
       "summary": "Mage sent by an unremembered empire to break the Rift for an army. Burned his soul to snap the seventh tower; the army never came. The top of the tower lies in the Krisen.",
       "links": ["the-rift", "kimberstone", "the-thirteen"] },
@@ -84,6 +93,15 @@
     { "id": "wendel-raust", "name": "Wendel Raust", "page": "people/wendel-raust.html", "realm": "bloria",
       "summary": "Ostvald reckoner, the gray rider. Audited Edrun Vasselt's books in Ocristan over the winter of 1487 AS and offered the Hundred-Eleven a second contract with the houses. Elric refused; Raust left by the west gate.",
       "links": ["edrun-vasselt", "elric", "the-ostvald-houses", "ocristan", "baron-mihail", "kalderhof"] },
+    { "id": "ilinca", "name": "Ilinca", "page": "people/ilinca.html", "realm": "veleh",
+      "summary": "Lord Andrej's daughter, about twelve in 1488 AS. With her brother Vasko, the Rift's legal heir, a ward in Baron Mihail's household since the fall. Said to have her nurse's mind-witch gift.",
+      "links": ["lord-andrej", "baron-mihail", "the-rift", "fall-of-the-rift", "blackmire", "ocristan"] },
+    { "id": "grigore-tal", "name": "Grigore Tal", "page": "people/grigore-tal.html", "realm": "veleh",
+      "summary": "Castellan of the Rift since 1487 AS, holding it for the boy Vasko under Mihail's wardship. One of the men who carried Mihail off the field at Crow's Pass; sixteen years in its garrison. Will not speak of the arch or stand in a gateway.",
+      "links": ["the-rift", "crows-pass", "ilinca", "baron-mihail", "lord-andrej", "battle-of-crows-pass", "the-counting-house", "blackmire"] },
+    { "id": "kaspar-hollmar", "name": "Kaspar Hollmar", "page": "people/kaspar-hollmar.html", "realm": "bloria",
+      "summary": "Head of House Hollmar, ruined c. 1458 AS; named the Lady aloud at court and fled. By report a mute brother of the Rookery since. Said to know how to strike a name from the crown's book from the bill's end; a bill rotted under his thumbnail at the Mechil embassy.",
+      "links": ["the-hollmar-failure", "the-rookery", "blood-seals", "the-lady-of-the-ledger", "the-mechil-embassy", "aldrecht", "kalderhof", "baron-mihail", "crows-pass"] },
     { "id": "elric", "name": "Elric", "page": "people/elric.html", "realm": null,
       "summary": "Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.",
       "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] },
@@ -113,7 +131,16 @@
       "links": ["edrun-vasselt", "the-counting-house", "the-thirteen", "baron-mihail", "kalderhof", "the-lady-of-the-ledger"] },
     { "id": "the-lady-of-the-ledger", "name": "The Lady of the Ledger", "page": "lore/the-lady-of-the-ledger.html",
       "summary": "Bloria's one of the Thirteen, as Blorians name it: a woman of middle years who has held the crown's book of debts at every coronation in the rolls, under a new name and office each reign. In 1488 AS taken to be Lady Hedwen, Mistress of the Privy Roll.",
-      "links": ["the-thirteen", "the-ostvald-houses", "kalderhof", "wendel-raust", "edrun-vasselt", "baron-mihail"] }
+      "links": ["the-thirteen", "the-ostvald-houses", "kalderhof", "wendel-raust", "edrun-vasselt", "baron-mihail"] },
+    { "id": "blood-seals", "name": "Blood-Seals", "page": "lore/blood-seals.html",
+      "summary": "The red seals on Ostvald bills, mixed with a bonded debtor's blood. By reckoners' teaching a seal holds only while its debtor's name stands in the crown's book; a struck name rots it, a dead one turns it to powder. The debtor feels where his bill lies.",
+      "links": ["the-ostvald-houses", "the-lady-of-the-ledger", "the-hollmar-failure", "kalderhof", "aldrecht", "wendel-raust", "baron-mihail", "edrun-vasselt", "the-margin"] },
+    { "id": "bound-relics", "name": "Bound Relics", "page": "lore/bound-relics.html",
+      "summary": "Objects with a will that bind a company of men, each by a different count, gift and price: the Grimoire, the Drum, the Chain, the Grey Standard. By the custom called the Courtesy, no two bound companies have ever met in the field.",
+      "links": ["the-grimoire", "elric", "the-margin", "the-thirteen", "the-gold-run"] },
+    { "id": "the-margin", "name": "The Margin", "page": "lore/the-margin.html",
+      "summary": "The Counting-House has no head. Its orders appear overnight, unsigned, in the margins of the second ledger, in an old hand nobody in the building owns. Known chiefly from a runaway clerk, 1488 AS.",
+      "links": ["the-counting-house", "tamarun", "the-gold-run", "haldevin", "lord-andrej", "vadra", "the-thirteen", "the-grimoire"] }
   ],
 
   "events": [
@@ -123,9 +150,27 @@
     { "id": "rift-last-taken", "name": "The Rift's last capture before 1487", "year": 1187, "approx": true, "page": null,
       "summary": "After this the Rift is said to be untakeable. By whom it was taken is not recorded.",
       "places": ["the-rift"], "people": [], "links": [] },
+    { "id": "breaking-of-the-bridge", "name": "Breaking of the Bridge", "year": 640, "approx": true, "page": "events/breaking-of-the-bridge.html",
+      "summary": "A beaten army retreating north breaks the builders' Vorn Danu bridge behind it; its mages spend the whole town of Ostrel to do it. The river at the crossing goes still one night a year since.",
+      "places": ["vorn-danu"], "people": [], "links": ["vorn-danu", "kimberstone", "crows-pass", "the-gold-run", "aran", "the-silence"] },
     { "id": "aran-breaks-the-tower", "name": "Aran breaks the seventh tower", "year": 1100, "approx": true, "page": null,
       "summary": "A mage burns his soul to snap one of the Rift's towers for an army that never comes. Before the capture of c. 1187; date otherwise disputed.",
       "places": ["the-rift"], "people": ["aran"], "links": ["kimberstone"] },
+    { "id": "first-siege-of-aldrecht", "name": "First siege of Aldrecht", "year": 1230, "approx": true, "page": null,
+      "summary": "An Ustrus army besieges the Blorian capital and breaks camp in autumn with the walls unbreached.",
+      "places": ["aldrecht"], "people": [], "links": ["aldrecht"] },
+    { "id": "second-siege-of-aldrecht", "name": "Second siege of Aldrecht", "year": 1384, "page": null,
+      "summary": "Two months; the inner wall undermined in three places. A relief army paid on Ostvald bills breaks the Ustrus camp a day before the city falls.",
+      "places": ["aldrecht"], "people": [], "links": ["aldrecht", "the-ostvald-houses"] },
+    { "id": "the-hollmar-failure", "name": "The Hollmar Failure", "year": 1458, "approx": true, "page": "events/the-hollmar-failure.html",
+      "summary": "House Hollmar accepts a loan repaid in full and frees four hundred bonded tenants. Its seals rot within a season; the other houses buy its debts and the family goes into bond. Its head, Kaspar Hollmar, names the Lady aloud at court and flees.",
+      "places": ["aldrecht", "kalderhof"], "people": [], "links": ["the-ostvald-houses", "the-lady-of-the-ledger", "aldrecht", "kalderhof"] },
+    { "id": "eberwin-crowned", "name": "Eberwin III crowned in Aldrecht", "year": 1461, "page": null,
+      "summary": "Lady Hedwen holds the book in the closed room. She is said not to have changed since.",
+      "places": ["aldrecht"], "people": [], "links": ["aldrecht", "the-lady-of-the-ledger"] },
+    { "id": "mechil-last-march", "name": "Mechil's last march into Veleh", "year": 1388, "approx": true, "page": null,
+      "summary": "A Mechil army comes south through the north-eastern forest, burns two villages and passes the Rookery by. Mechil has not moved on Veleh since.",
+      "places": ["the-rookery"], "people": [], "links": ["the-rookery"] },
     { "id": "elric-crosses-the-sea", "name": "Elric crosses the Eastern Sea", "year": 1424, "approx": true, "page": null,
       "summary": "Elric arrives from the uncharted east, twenty-one days at sea, tied to the mast.",
       "places": [], "people": ["elric"], "links": [] },
@@ -155,7 +200,7 @@
       "places": ["haldevin"], "people": [], "links": ["haldevin", "trantar"] },
     { "id": "the-mechil-embassy", "name": "The Mechil Embassy", "year": 1488, "page": "events/the-mechil-embassy.html",
       "summary": "While Trantar burns, Mihail rides east in secret and offers to default on the Ustrus loan if Mechil will stand behind him. The envoys listen and give no answer.",
-      "places": [], "people": ["baron-mihail"], "links": ["baron-mihail", "trantar", "the-gold-run", "the-counting-house", "the-thirteen", "elric"] },
+      "places": ["the-rookery"], "people": ["baron-mihail"], "links": ["baron-mihail", "trantar", "the-gold-run", "the-counting-house", "the-thirteen", "elric", "the-rookery"] },
     { "id": "the-drowned-clerk", "name": "The Drowned Clerk", "year": 1487, "page": "events/the-drowned-clerk.html",
       "summary": "Iacob Serdan, the chancery clerk who sold Vasselt a copy of the Ustrus loan terms, is found in Ocristan's town ditch. Self-drowned, by the wardens' finding; his note says he sold the terms twice.",
       "places": ["ocristan"], "people": ["edrun-vasselt", "baron-mihail"], "links": ["edrun-vasselt", "the-gold-run", "wendel-raust", "ocristan", "the-counting-house", "the-mechil-embassy"] }

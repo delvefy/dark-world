@@ -15,7 +15,7 @@
 
 <div class="atlas">
   <div class="map-wrap">
-    <svg id="map" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Veleh and its neighbours">
+    <svg id="map" viewBox="-300 -300 1400 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Veleh and its neighbours">
       <defs>
         <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
           <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
@@ -53,30 +53,30 @@
       </defs>
 
       <!-- parchment ground -->
-      <rect x="-500" y="-500" width="2000" height="1700" fill="#0d0c0a"/>
-      <rect x="0" y="0" width="1000" height="700" fill="#e2d3ae" filter="url(#paper)"/>
+      <rect data-canvas="ground" x="-1700" y="-1500" width="4200" height="3600" fill="#0d0c0a"/>
+      <rect data-canvas="paper" x="-300" y="-300" width="1400" height="1200" fill="#e2d3ae" filter="url(#paper)"/>
 
       <!-- ================= TERRAIN ================= -->
       <g id="layer-terrain">
         <!-- Eastern Sea -->
         <g filter="url(#rough)">
-          <path id="sea" d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 L1000 700 L1000 0 Z"
+          <path id="sea" d="M804 -300 C792 -240, 814 -175, 798 -112 C786 -62, 808 -30, 800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 C808 742, 790 796, 801 846 C808 872, 796 888, 802 900 L1100 900 L1100 -300 Z"
                 fill="#c9c3a1"/>
-          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 L1000 700 L1000 0 Z"
+          <path d="M804 -300 C792 -240, 814 -175, 798 -112 C786 -62, 808 -30, 800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 C808 742, 790 796, 801 846 C808 872, 796 888, 802 900 L1100 900 L1100 -300 Z"
                 fill="url(#sea-lines)"/>
-          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+          <path d="M804 -300 C792 -240, 814 -175, 798 -112 C786 -62, 808 -30, 800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 C808 742, 790 796, 801 846 C808 872, 796 888, 802 900"
                 fill="none" stroke="#2b2219" stroke-width="1.8"/>
-          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+          <path d="M804 -300 C792 -240, 814 -175, 798 -112 C786 -62, 808 -30, 800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 C808 742, 790 796, 801 846 C808 872, 796 888, 802 900"
                 fill="none" stroke="#2b2219" stroke-width="0.7" opacity="0.4" transform="translate(9 0)"/>
-          <path d="M800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700"
+          <path d="M804 -300 C792 -240, 814 -175, 798 -112 C786 -62, 808 -30, 800 0 C788 55, 812 105, 796 165 C784 215, 806 262, 792 318 C788 340, 794 358, 798 372 C802 392, 790 420, 797 458 C806 505, 788 548, 798 600 C806 640, 792 672, 800 700 C808 742, 790 796, 801 846 C808 872, 796 888, 802 900"
                 fill="none" stroke="#2b2219" stroke-width="0.5" opacity="0.25" transform="translate(18 0)"/>
         </g>
 
         <!-- Rivers -->
         <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
-          <path id="r-vorn" d="M-10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
+          <path id="r-vorn" d="M-300 594 C-232 604, -150 578, -70 584 C-40 586, -24 578, -10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
                 stroke="#2b2219" stroke-width="7.5"/>
-          <path d="M-10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
+          <path d="M-300 594 C-232 604, -150 578, -70 584 C-40 586, -24 578, -10 575 C80 560, 160 570, 240 556 S380 540, 460 545 S600 548, 660 552 C700 555, 712 520, 705 480 C698 440, 690 410, 720 392 C745 378, 770 380, 798 372"
                 stroke="#8fa39b" stroke-width="5"/>
           <path d="M758 382 C770 394, 784 398, 799 400 M764 379 C776 366, 789 360, 800 352 M772 381 C782 386, 790 384, 800 384" stroke="#2b2219" stroke-width="1.6"/>
 
@@ -164,8 +164,46 @@
           <use href="#tuft" x="268" y="372"/>
         </g>
 
+        <!-- Margins added when the canvas grew: northern Bloria and Mechil, the west, southern Ustrus -->
+        <g filter="url(#rough)">
+          <use href="#peak" transform="translate(40 -40) scale(0.8)"/>
+          <use href="#peak" transform="translate(-10 -70) scale(0.9)"/>
+          <use href="#peak" transform="translate(-70 -40) scale(0.75)"/>
+          <use href="#peak" transform="translate(560 -60) scale(0.85)"/>
+          <use href="#peak" transform="translate(605 -90)"/>
+          <use href="#peak" transform="translate(650 -55) scale(0.8)"/>
+          <use href="#peak" transform="translate(700 -230) scale(0.8)"/>
+          <use href="#peak" transform="translate(745 -250) scale(0.9)"/>
+          <use href="#hill" transform="translate(180 -240)"/>
+          <use href="#hill" transform="translate(212 -228) scale(0.8)"/>
+          <use href="#hill" transform="translate(-180 -170)"/>
+          <use href="#hill" transform="translate(-150 -158) scale(0.8)"/>
+          <use href="#hill" transform="translate(-230 250)"/>
+          <use href="#hill" transform="translate(-200 262) scale(0.8)"/>
+          <use href="#hill" transform="translate(-150 120) scale(0.9)"/>
+          <use href="#hill" transform="translate(-60 350) scale(0.8)"/>
+          <use href="#hill" transform="translate(40 720)"/>
+          <use href="#hill" transform="translate(70 734) scale(0.8)"/>
+          <use href="#hill" transform="translate(-180 760) scale(0.9)"/>
+          <use href="#hill" transform="translate(330 790)"/>
+          <use href="#hill" transform="translate(362 802) scale(0.8)"/>
+          <use href="#hill" transform="translate(600 760) scale(0.9)"/>
+          <use href="#hill" transform="translate(700 840)"/>
+        </g>
+        <g filter="url(#rough)">
+          <use href="#tree" x="-160" y="420"/><use href="#tree" x="-146" y="432"/><use href="#tree" x="-172" y="436"/>
+          <use href="#tree" x="-134" y="418"/><use href="#tree" x="-158" y="448"/>
+          <use href="#tree" x="520" y="-180"/><use href="#tree" x="534" y="-168"/><use href="#tree" x="508" y="-166"/>
+          <use href="#tree" x="546" y="-182"/>
+          <use href="#tree" x="160" y="840"/><use href="#tree" x="174" y="852"/><use href="#tree" x="148" y="856"/>
+        </g>
+        <g>
+          <use href="#tuft" x="300" y="-196"/><use href="#tuft" x="356" y="-214"/><use href="#tuft" x="380" y="-186"/>
+          <use href="#tuft" x="296" y="-232"/><use href="#tuft" x="342" y="-170"/>
+        </g>
+
         <!-- Compass -->
-        <g transform="translate(912 604)" fill="none" stroke="#2b2219">
+        <g transform="translate(1040 828)" fill="none" stroke="#2b2219">
           <circle r="28" stroke-width="0.8"/>
           <circle r="22" stroke-width="0.5" stroke-dasharray="2 3"/>
           <path d="M0 -34 L6 0 L0 34 L-6 0 Z" fill="#2b2219" stroke-width="0.6"/>
@@ -174,7 +212,7 @@
         </g>
 
         <!-- Cartouche -->
-        <g transform="translate(22 646)">
+        <g transform="translate(-282 848)">
           <rect width="250" height="40" fill="#e2d3ae" stroke="#2b2219" stroke-width="1"/>
           <rect x="3" y="3" width="244" height="34" fill="none" stroke="#2b2219" stroke-width="0.5"/>
           <text x="125" y="18" text-anchor="middle" font-family="IM Fell English SC, Georgia, serif" font-size="13" fill="#2b2219">Veleh &amp; the Seam of Empires</text>
@@ -186,7 +224,7 @@
       <g id="layer-borders" fill="none" stroke="#7a2a1e" stroke-width="1.6" stroke-dasharray="7 4 1.5 4" opacity="0.85" filter="url(#rough)">
         <path d="M30 562 C25 480, 35 380, 40 300 C50 240, 90 200, 140 185 C220 165, 330 160, 450 168 C540 172, 600 188, 660 182 C720 178, 760 172, 793 170"/>
         <path d="M682 553 C720 565, 760 575, 797 588"/>
-        <path d="M450 168 C440 120, 455 60, 445 0"/>
+        <path d="M450 168 C440 120, 455 60, 445 0 C438 -80, 456 -170, 442 -300"/>
       </g>
 
       <!-- ================= ROADS ================= -->
@@ -202,21 +240,22 @@
       <!-- ================= LABELS ================= -->
       <g id="layer-labels" fill="#2b2219" font-family="IM Fell English SC, Georgia, serif">
         <g font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="12" fill="#3f5550">
-          <text dy="-6"><textPath href="#r-vorn" startOffset="22%">Vorn Danu</textPath></text>
-          <text dy="-5"><textPath href="#r-vorn" startOffset="62%">Vorn Danu</textPath></text>
+          <text dy="-6"><textPath href="#r-vorn" startOffset="40%">Vorn Danu</textPath></text>
+          <text dy="-5"><textPath href="#r-vorn" startOffset="72%">Vorn Danu</textPath></text>
+          <text dy="-6"><textPath href="#r-vorn" startOffset="8%">Vorn Danu</textPath></text>
           <text dy="-5" font-size="10.5"><textPath href="#r-olta" startOffset="18%">Olta</textPath></text>
           <text dy="12" font-size="10.5"><textPath href="#r-olta" startOffset="83%">Olta</textPath></text>
           <text dy="11" font-size="10.5"><textPath href="#r-krisen" startOffset="22%">Krisen</textPath></text>
         </g>
-        <text x="905" y="340" font-size="20" letter-spacing="8" fill="#3f5550" transform="rotate(90 905 340)" text-anchor="middle">Eastern Sea</text>
-        <text x="935" y="70" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">beyond the sea:</text>
-        <text x="935" y="84" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">the wild lands, uncharted</text>
-        <text x="655" y="678" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11.5" text-anchor="middle">to Beit Haifud, many days south-east ↘</text>
+        <text x="955" y="300" font-size="20" letter-spacing="8" fill="#3f5550" transform="rotate(90 955 300)" text-anchor="middle">Eastern Sea</text>
+        <text x="955" y="-232" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">beyond the sea:</text>
+        <text x="955" y="-218" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11" fill="#3f5550" text-anchor="middle">the wild lands, uncharted</text>
+        <text x="690" y="884" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="11.5" text-anchor="middle">to Beit Haifud, many days south-east ↘</text>
 <!-- BEGIN:labels -->
         <text x="380" y="268" font-size="26" letter-spacing="14" text-anchor="middle" opacity="0.75">VELEH</text>
-        <text x="200" y="58" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">BLORIA</text>
-        <text x="640" y="56" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">MECHIL</text>
-        <text x="400" y="640" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">USTRUS</text>
+        <text x="190" y="-140" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">BLORIA</text>
+        <text x="640" y="-150" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">MECHIL</text>
+        <text x="400" y="760" font-size="22" letter-spacing="10" text-anchor="middle" opacity="0.55">USTRUS</text>
         <text x="150" y="262" font-size="12" letter-spacing="3" text-anchor="middle" opacity="0.6" font-style="italic">OLTA</text>
         <text x="754" y="500" font-size="12" letter-spacing="3" text-anchor="middle" opacity="0.6" font-style="italic">STROVA</text>
         <text x="250" y="340" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Tullanon</text>
@@ -227,7 +266,9 @@
         <text x="440" y="521" font-size="14" text-anchor="middle" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">The Blackmire</text>
         <text x="312" y="229" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Haldevin</text>
         <text x="140" y="216" font-size="14" text-anchor="end" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Crow&#x27;s Pass</text>
-        <text x="342" y="54" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Kalderhof</text>
+        <text x="342" y="-196" font-size="14" text-anchor="start" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Kalderhof</text>
+        <text x="120" y="96" font-size="16" text-anchor="end" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Aldrecht</text>
+        <text x="696" y="218" font-size="14" text-anchor="end" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">The Rookery</text>
         <text x="778" y="442" font-size="14" text-anchor="middle" stroke="#e2d3ae" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">Vadra</text>
 <!-- END:labels -->
       </g>
@@ -243,12 +284,14 @@
         <g transform="translate(440 500)"><a href="places/blackmire.html" class="marker" aria-label="The Blackmire"><title>The Blackmire</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M0 -7 L6 6 H-6 Z" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/></g></a></g>
         <g transform="translate(300 225)"><a href="places/haldevin.html" class="marker" aria-label="Haldevin"><title>Haldevin</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M-6 6 V-5 L-2 -3 L1 -6 L6 -2 V6 Z" fill="none" stroke="#2b2219" stroke-width="1.3" stroke-dasharray="3 1.5"/></g></a></g>
         <g transform="translate(152 212)"><a href="places/crows-pass.html" class="marker" aria-label="Crow&#x27;s Pass"><title>Crow&#x27;s Pass</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M0 -7 L6 6 H-6 Z" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/></g></a></g>
-        <g transform="translate(330 50)"><a href="places/kalderhof.html" class="marker" aria-label="Kalderhof"><title>Kalderhof</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M0 -7 L6 6 H-6 Z" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/></g></a></g>
+        <g transform="translate(330 -200)"><a href="places/kalderhof.html" class="marker" aria-label="Kalderhof"><title>Kalderhof</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M0 -7 L6 6 H-6 Z" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/></g></a></g>
+        <g transform="translate(132 92)"><a href="places/aldrecht.html" class="marker" aria-label="Aldrecht"><title>Aldrecht</title><circle r="15" fill="transparent"/><g class="glyph"><circle r="9.5" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/><circle r="5" fill="#8e2a20" stroke="#2b2219" stroke-width="1"/></g></a></g>
+        <g transform="translate(708 214)"><a href="places/the-rookery.html" class="marker" aria-label="The Rookery"><title>The Rookery</title><circle r="15" fill="transparent"/><g class="glyph"><path d="M0 -7 L6 6 H-6 Z" fill="#e2d3ae" stroke="#2b2219" stroke-width="1.2"/></g></a></g>
         <g transform="translate(778 455)"><a href="places/vadra.html" class="marker" aria-label="Vadra"><title>Vadra</title><circle r="15" fill="transparent"/><g class="glyph"><circle r="5.2" fill="#2b2219"/><circle r="2.1" fill="#e2d3ae"/></g></a></g>
 <!-- END:markers -->
       </g>
 
-      <rect x="0" y="0" width="1000" height="700" fill="url(#vignette)" pointer-events="none"/>
+      <rect data-canvas="vignette" x="-300" y="-300" width="1400" height="1200" fill="url(#vignette)" pointer-events="none"/>
     </svg>
 
     <div class="map-controls">
@@ -271,12 +314,14 @@
     <p class="intro">Drag to pan, scroll to zoom. Hover a marker for its name; click to open it.</p>
     <h2>Places</h2>
     <ul>
+      <li><a href="places/aldrecht.html" title="Walled crown city of Bloria at the springs of the Olta. The Burg, the Ostvald exchange, the great Bond. Twice besieged by Ustrus, never taken. Seat of the old king Eberwin III.">Aldrecht</a></li>
       <li><a href="places/crows-pass.html" title="High saddle on the Bloria border under a freestanding kimberstone arch. Mihail died and was raised on its sill in 1472 AS; his household has held it since.">Crow&#x27;s Pass</a></li>
       <li><a href="places/haldevin.html" title="Mill village in the western foothills. Raised men for the Trantar rising under Dean Farrick&#x27;s squad; burned by the tax riders in 1488 AS, its church register taken.">Haldevin</a></li>
       <li><a href="places/kalderhof.html" title="Walled crown estate on the northern moors of Bloria where the Ostvald lower bond ends. Named by everyone, visited by no one. Said to spend debtors a year at a time; sends out only ash.">Kalderhof</a></li>
       <li><a href="places/ocristan.html" title="Walled capital of Veleh, seat of the council. Bought with Ustrus gold in 1487 AS.">Ocristan</a></li>
       <li><a href="places/blackmire.html" title="Fen south of the Rift between the Krisen, Olta and Vorn Danu. Home of the witch-line that sells years and takes payment in other lives.">The Blackmire</a></li>
       <li><a href="places/the-rift.html" title="White kimberstone fortress at the meeting of the Olta and Krisen. Seven towers, one broken. Fell in 1487 AS.">The Rift</a></li>
+      <li><a href="places/the-rookery.html" title="Monastery of a mute order in the north-eastern forest, a day from the Mechil border, ringed by a vast crow roost. Untaxed, untouched by Mechil. Where Mihail met Mechil&#x27;s envoys in 1488 AS. Held in the north-east to be where Mechil listens to the crows.">The Rookery</a></li>
       <li><a href="places/trantar.html" title="Bone-walled city on Veleh&#x27;s western border. Where the peasant revolt broke in 1488 AS.">Trantar</a></li>
       <li><a href="places/tullanon.html" title="Swamp city on rotting pillars over the Olta. Clams, fog, slums. Where the Hundred-Eleven recruited Alden.">Tullanon</a></li>
       <li><a href="places/vadra.html" title="Lordless fishing town on the Strova coast, run by a compact of boat-owners called the Benches. Landed the Ustrus gold in 1487 AS; buried the galley dead that washed up after, and kept eleven Counting-House tallies cut from their collars.">Vadra</a></li>
@@ -288,28 +333,40 @@
       <li><a href="people/baron-mihail.html" title="Revenant baron bidding for the throne of Veleh, caught between three empires.">Baron Mihail</a></li>
       <li><a href="people/edrun-vasselt.html" title="Bloria&#x27;s factor in Ocristan; pays Mihail in blood-sealed bills. Bought a copy of the Ustrus loan terms and sold his silence to Mihail instead of sending it home.">Edrun Vasselt</a></li>
       <li><a href="people/elric.html" title="Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.">Elric</a></li>
-      <li><a href="people/lord-andrej.html" title="Last lord of the Rift. Held it five weeks against Mihail&#x27;s larger army; lost it when the Hundred-Eleven opened the gate from inside. Died caged in the sun, 1487 AS.">Lord Andrej</a></li>
+      <li><a href="people/grigore-tal.html" title="Castellan of the Rift since 1487 AS, holding it for the boy Vasko under Mihail&#x27;s wardship. One of the men who carried Mihail off the field at Crow&#x27;s Pass; sixteen years in its garrison. Will not speak of the arch or stand in a gateway.">Grigore Tal</a></li>
+      <li><a href="people/ilinca.html" title="Lord Andrej&#x27;s daughter, about twelve in 1488 AS. With her brother Vasko, the Rift&#x27;s legal heir, a ward in Baron Mihail&#x27;s household since the fall. Said to have her nurse&#x27;s mind-witch gift.">Ilinca</a></li>
+      <li><a href="people/kaspar-hollmar.html" title="Head of House Hollmar, ruined c. 1458 AS; named the Lady aloud at court and fled. By report a mute brother of the Rookery since. Said to know how to strike a name from the crown&#x27;s book from the bill&#x27;s end; a bill rotted under his thumbnail at the Mechil embassy.">Kaspar Hollmar</a></li>
+      <li><a href="people/lord-andrej.html" title="Last lord of the Rift. Held it five weeks against Mihail&#x27;s larger army; lost it when the Hundred-Eleven opened the gate from inside. Died caged in the sun, 1487 AS. His children are Mihail&#x27;s wards.">Lord Andrej</a></li>
       <li><a href="people/olegzander.html" title="Ustrus&#x27;s proxy, king of Veleh 1485–1487 AS. Called the Putrid for a Blackmire rot that never killed him. Brought down by a false story that he sold the Rift; dead in 1487 AS.">Olegzander</a></li>
       <li><a href="people/tamarun.html" title="The young Emperor of Ustrus. Went around his own Counting-House to lend Mihail gold, apparently to turn Veleh against Bloria. Whether he knows what stands behind his throne is unconfirmed.">Tamarun</a></li>
       <li><a href="people/wendel-raust.html" title="Ostvald reckoner, the gray rider. Audited Edrun Vasselt&#x27;s books in Ocristan over the winter of 1487 AS and offered the Hundred-Eleven a second contract with the houses. Elric refused; Raust left by the west gate.">Wendel Raust</a></li>
     </ul>
     <h2>Lore</h2>
     <ul>
+      <li><a href="lore/blood-seals.html" title="The red seals on Ostvald bills, mixed with a bonded debtor&#x27;s blood. By reckoners&#x27; teaching a seal holds only while its debtor&#x27;s name stands in the crown&#x27;s book; a struck name rots it, a dead one turns it to powder. The debtor feels where his bill lies.">Blood-Seals</a></li>
+      <li><a href="lore/bound-relics.html" title="Objects with a will that bind a company of men, each by a different count, gift and price: the Grimoire, the Drum, the Chain, the Grey Standard. By the custom called the Courtesy, no two bound companies have ever met in the field.">Bound Relics</a></li>
       <li><a href="lore/kimberstone.html" title="The builders&#x27; white stone. Proof against every tool and siege engine; only rare, costly magic has ever broken it. Hidden under old Tullanon as well as standing at the Rift.">Kimberstone</a></li>
       <li><a href="lore/the-counting-house.html" title="Ustrus&#x27;s revenue office in Beit Haifud. Taxes Veleh in goods and in people. Answers to the power behind the Ustrus throne, not the Emperor.">The Counting-House</a></li>
       <li><a href="lore/the-grimoire.html" title="Book bound in human skin. Binds the 111 men of the Hundred-Eleven. A will of its own.">The Grimoire</a></li>
       <li><a href="lore/the-lady-of-the-ledger.html" title="Bloria&#x27;s one of the Thirteen, as Blorians name it: a woman of middle years who has held the crown&#x27;s book of debts at every coronation in the rolls, under a new name and office each reign. In 1488 AS taken to be Lady Hedwen, Mistress of the Privy Roll.">The Lady of the Ledger</a></li>
       <li><a href="lore/the-last-dawn.html" title="A single old fragment says the Last Dawn will return and end the Thirteen. Copies disagree on every key word. No power openly hunts it; tax riders put out its candles.">The Last Dawn</a></li>
+      <li><a href="lore/the-margin.html" title="The Counting-House has no head. Its orders appear overnight, unsigned, in the margins of the second ledger, in an old hand nobody in the building owns. Known chiefly from a runaway clerk, 1488 AS.">The Margin</a></li>
       <li><a href="lore/the-ostvald-houses.html" title="Bloria&#x27;s banking families. Lend to crown and lords on terms that cannot be met, take people in bond, seal their bills in debtors&#x27; blood. Long-held debtors go north by night and do not return.">The Ostvald Houses</a></li>
       <li><a href="lore/the-thirteen.html" title="Thirteen nigh-immortals who rule through empires and war on each other. Prophesied to fall to the Last Dawn.">The Thirteen</a></li>
     </ul>
     <h2>Chronicle</h2>
     <ul>
       <li><span class="yr">0 AS</span><a href="events/the-silence.html" title="The kimberstone builders vanish. Year zero of the common reckoning.">The Silence</a></li>
+      <li><span class="yr">c. 640 AS</span><a href="events/breaking-of-the-bridge.html" title="A beaten army retreating north breaks the builders&#x27; Vorn Danu bridge behind it; its mages spend the whole town of Ostrel to do it. The river at the crossing goes still one night a year since.">Breaking of the Bridge</a></li>
       <li><span class="yr">c. 1100 AS</span><span class="unconfirmed">Aran breaks the seventh tower</span></li>
       <li><span class="yr">c. 1187 AS</span><span class="unconfirmed">The Rift&#x27;s last capture before 1487</span></li>
+      <li><span class="yr">c. 1230 AS</span><span class="unconfirmed">First siege of Aldrecht</span></li>
+      <li><span class="yr">1384 AS</span><span class="unconfirmed">Second siege of Aldrecht</span></li>
+      <li><span class="yr">c. 1388 AS</span><span class="unconfirmed">Mechil&#x27;s last march into Veleh</span></li>
       <li><span class="yr">c. 1424 AS</span><span class="unconfirmed">Elric crosses the Eastern Sea</span></li>
       <li><span class="yr">c. 1437 AS</span><span class="unconfirmed">Ustrus takes Veleh by proxy</span></li>
+      <li><span class="yr">c. 1458 AS</span><a href="events/the-hollmar-failure.html" title="House Hollmar accepts a loan repaid in full and frees four hundred bonded tenants. Its seals rot within a season; the other houses buy its debts and the family goes into bond. Its head, Kaspar Hollmar, names the Lady aloud at court and flees.">The Hollmar Failure</a></li>
+      <li><span class="yr">1461 AS</span><span class="unconfirmed">Eberwin III crowned in Aldrecht</span></li>
       <li><span class="yr">1472 AS</span><a href="events/battle-of-crows-pass.html" title="Mihail dies with three arrows in the chest, and comes back.">Battle of Crow&#x27;s Pass</a></li>
       <li><span class="yr">1484 AS</span><span class="unconfirmed">Death of the last king of Veleh</span></li>
       <li><span class="yr">1485 AS</span><span class="unconfirmed">Olegzander crowned</span></li>
@@ -327,7 +384,7 @@
 <script>
 (() => {
   const svg = document.getElementById('map');
-  const FULL = { x: 0, y: 0, w: 1000, h: 700 };
+  const FULL = { x: -300, y: -300, w: 1400, h: 1200 };
   const MIN_W = 140;
   let vb = { ...FULL };
 

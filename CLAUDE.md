@@ -33,10 +33,11 @@ A growing wiki + hand-drawn map of a dark-fantasy world: early-modern European h
 1. Read `world.json` (and the pages you'll touch) before writing.
 2. **Every new page links to at least 2 existing pages.** Add the reverse link on at least one of them.
 3. Every page ends with **Loose threads** (2–4 bullets). The next session pulls one.
-4. New place → coordinates in `world.json` (map is 1000×700; Veleh core sits roughly x 40–800, y 160–560). Keep it on land, off rivers, and clear of existing labels.
-5. New event → `year` in AS. Pages may be `null` for minor events (they'll feed the timeline later).
-6. Run `python3 build.py` at the end. It must pass with no errors.
-7. Commit only when asked.
+4. New place → coordinates in `world.json`. The canvas is `meta.map_viewbox` (`[x, y, width, height]`, currently `[-300, -300, 1400, 1200]`, so x −300…1100, y −300…900; coordinates can be negative). Veleh core sits roughly x 40–800, y 160–560; Bloria lies north and north-west, Mechil north-east, the land west of Veleh is still unmapped, Ustrus south of the Vorn Danu, the sea east of x ≈ 800. Keep it on land, off rivers, and clear of existing labels.
+5. **The map may grow.** When a region gets cramped or a place needs room, enlarge `meta.map_viewbox` outward (don't rescale: existing coordinates stay valid). `build.py` syncs the svg viewBox, the canvas rects and the zoom box. Then extend the hand-drawn terrain in `index.html` (sea, Vorn Danu, borders) to the new edges, move the compass and cartouche to the corners, and add a little terrain so new ground isn't blank.
+6. New event → `year` in AS. Pages may be `null` for minor events (they'll feed the timeline later).
+7. Run `python3 build.py` at the end. It must pass with no errors.
+8. Commit only when asked.
 
 ## Session menu
 

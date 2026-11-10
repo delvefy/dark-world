@@ -25,6 +25,11 @@ def load():
     return json.loads(WORLD.read_text(encoding="utf-8"))
 
 
+def viewbox(w):
+    """Map canvas as [x, y, width, height]. Grow it in world.json meta.map_viewbox when the map gets cramped."""
+    return w["meta"].get("map_viewbox", [0, 0, 1000, 700])
+
+
 def all_entries(w):
     for kind in FOLDERS:
         for e in w.get(kind, []):
@@ -53,8 +58,12 @@ def validate(w):
         if kind == "events" and not isinstance(e.get("year"), int):
             errors.append(f"{e['id']}: event needs an integer 'year' (AS)")
         if kind == "places":
-            if not (0 <= e.get("x", -1) <= 1000 and 0 <= e.get("y", -1) <= 700):
-                errors.append(f"{e['id']}: coordinates outside the 1000x700 map")
+            vx, vy, vw, vh = viewbox(w)
+            x, y = e.get("x"), e.get("y")
+            if not (isinstance(x, (int, float)) and isinstance(y, (int, float))
+                    and vx <= x <= vx + vw and vy <= y <= vy + vh):
+                errors.append(f"{e['id']}: coordinates outside the map "
+                              f"(x {vx}..{vx + vw}, y {vy}..{vy + vh})")
 
     place_ids = {p["id"] for p in w.get("places", [])}
     for r in w.get("roads", []) + w.get("routes", []):
@@ -189,8 +198,27 @@ def replace_block(text, name, content):
     return pat.sub(lambda m: m.group(1) + (content + "\n" if content else "") + m.group(2), text)
 
 
+def sync_canvas(text, w):
+    """Keep the svg viewBox, the full-size rects and the zoom script's FULL box in step with map_viewbox."""
+    x, y, vw, vh = viewbox(w)
+    subs = [
+        (r'(<svg id="map" viewBox=")[^"]*(")', rf'\g<1>{x} {y} {vw} {vh}\g<2>'),
+        (r'const FULL = \{[^}]*\};', f'const FULL = {{ x: {x}, y: {y}, w: {vw}, h: {vh} }};'),
+        (r'(<rect data-canvas="(?:paper|vignette)") x="[^"]*" y="[^"]*" width="[^"]*" height="[^"]*"',
+         rf'\g<1> x="{x}" y="{y}" width="{vw}" height="{vh}"'),
+        (r'(<rect data-canvas="ground") x="[^"]*" y="[^"]*" width="[^"]*" height="[^"]*"',
+         rf'\g<1> x="{x - vw}" y="{y - vh}" width="{3 * vw}" height="{3 * vh}"'),
+    ]
+    for pat, rep in subs:
+        text, n = re.subn(pat, rep, text)
+        if not n:
+            errors.append(f"index.html: canvas element not found for /{pat}/")
+    return text
+
+
 def build(w):
     text = INDEX.read_text(encoding="utf-8")
+    text = sync_canvas(text, w)
     for name, fn in (("roads", gen_roads), ("labels", gen_labels),
                      ("markers", gen_markers), ("codex", gen_codex)):
         text = replace_block(text, name, fn(w))
