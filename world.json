@@ -53,7 +53,10 @@
       "links": ["baron-mihail", "olegzander", "battle-of-crows-pass", "the-rift", "vorn-danu"] },
     { "id": "haldevin", "name": "Haldevin", "type": "ruin", "realm": "veleh", "x": 300, "y": 225, "page": "places/haldevin.html",
       "summary": "Mill village in the western foothills. Raised men for the Trantar rising under Dean Farrick's squad; burned by the tax riders in 1488 AS, its church register taken.",
-      "links": ["trantar", "olegzander", "ocristan", "blackmire"] }
+      "links": ["trantar", "olegzander", "ocristan", "blackmire"] },
+    { "id": "crows-pass", "name": "Crow's Pass", "type": "pass", "realm": "veleh", "x": 152, "y": 212, "label_pos": "left", "page": "places/crows-pass.html",
+      "summary": "High saddle on the Bloria border under a freestanding kimberstone arch. Mihail died and was raised on its sill in 1472 AS; his household has held it since.",
+      "links": ["battle-of-crows-pass", "baron-mihail", "blackmire", "kimberstone", "haldevin", "edrun-vasselt"] }
   ],
 
   "people": [
@@ -68,7 +71,10 @@
       "links": ["the-rift", "kimberstone", "the-thirteen"] },
     { "id": "tamarun", "name": "Tamarun", "page": "people/tamarun.html", "realm": "ustrus",
       "summary": "The young Emperor of Ustrus. Went around his own Counting-House to lend Mihail gold, apparently to turn Veleh against Bloria. Whether he knows what stands behind his throne is unconfirmed.",
-      "links": ["the-gold-run", "the-counting-house", "baron-mihail", "the-thirteen", "olegzander", "elric"] },
+      "links": ["the-gold-run", "the-counting-house", "baron-mihail", "the-thirteen", "olegzander", "elric", "edrun-vasselt"] },
+    { "id": "edrun-vasselt", "name": "Edrun Vasselt", "page": "people/edrun-vasselt.html", "realm": "bloria",
+      "summary": "Bloria's factor in Ocristan; pays Mihail in blood-sealed bills. Bought a copy of the Ustrus loan terms and sold his silence to Mihail instead of sending it home.",
+      "links": ["baron-mihail", "tamarun", "ocristan", "the-gold-run", "the-mechil-embassy"] },
     { "id": "elric", "name": "Elric", "page": "people/elric.html", "realm": null,
       "summary": "Centurion, Number One of the Hundred-Eleven. Crossed the Eastern Sea c. 1424 AS.",
       "links": ["the-grimoire", "fall-of-the-rift", "baron-mihail"] },
@@ -92,7 +98,10 @@
       "links": ["olegzander", "the-gold-run", "haldevin", "the-thirteen", "lord-andrej"] },
     { "id": "the-last-dawn", "name": "The Last Dawn", "page": "lore/the-last-dawn.html",
       "summary": "A single old fragment says the Last Dawn will return and end the Thirteen. Copies disagree on every key word. No power openly hunts it; tax riders put out its candles.",
-      "links": ["the-thirteen", "the-silence", "baron-mihail"] }
+      "links": ["the-thirteen", "the-silence", "baron-mihail"] },
+    { "id": "the-ostvald-houses", "name": "The Ostvald Houses", "page": "lore/the-ostvald-houses.html",
+      "summary": "Bloria's banking families. Lend to crown and lords on terms that cannot be met, take people in bond, seal their bills in debtors' blood. Long-held debtors go north by night and do not return.",
+      "links": ["edrun-vasselt", "the-counting-house", "the-thirteen", "baron-mihail"] }
   ],
 
   "events": [
@@ -113,7 +122,7 @@
       "places": ["ocristan"], "people": [], "links": [] },
     { "id": "battle-of-crows-pass", "name": "Battle of Crow's Pass", "year": 1472, "page": "events/battle-of-crows-pass.html",
       "summary": "Mihail dies with three arrows in the chest, and comes back.",
-      "places": [], "people": ["baron-mihail"], "links": ["baron-mihail", "the-thirteen"] },
+      "places": ["crows-pass"], "people": ["baron-mihail"], "links": ["baron-mihail", "the-thirteen", "crows-pass"] },
     { "id": "death-of-the-king", "name": "Death of the last king of Veleh", "year": 1484, "page": null,
       "summary": "Arrow through the throat; some say murder. A dozen barons raise levies.",
       "places": ["ocristan"], "people": [], "links": [] },
@@ -123,9 +132,9 @@
     { "id": "fall-of-the-rift", "name": "Fall of the Rift", "year": 1487, "page": "events/fall-of-the-rift.html",
       "summary": "Mihail and the Hundred-Eleven take the fortress that could not fall.",
       "places": ["the-rift"], "people": ["baron-mihail", "elric"], "links": ["the-rift", "baron-mihail", "the-grimoire"] },
-    { "id": "fall-of-olegzander", "name": "Fall of King Olegzander", "year": 1487, "page": null,
-      "summary": "A false story that he sold the Rift costs him the crown. After the bought vote his chair is empty; probably killed near the west gate, no body shown.",
-      "places": ["ocristan"], "people": ["olegzander"], "links": [] },
+    { "id": "fall-of-olegzander", "name": "Fall of King Olegzander", "year": 1487, "page": "events/fall-of-olegzander.html",
+      "summary": "A story that he sold the Rift, written by Mihail's household before the siege, costs him the crown. After the bought vote the Hundred-Eleven kill him near the west gate on Mihail's order; no body shown.",
+      "places": ["ocristan"], "people": ["olegzander", "baron-mihail", "elric"], "links": ["olegzander", "fall-of-the-rift", "ocristan", "baron-mihail", "the-gold-run", "the-grimoire"] },
     { "id": "the-gold-run", "name": "The Gold Run", "year": 1487, "page": "events/the-gold-run.html",
       "summary": "Mihail's journey to Beit Haifud and back with an Ustrus loan in gold. Hunted by bloodhounds and galleys sent from inside Ustrus.",
       "places": ["vorn-danu", "ocristan"], "people": ["baron-mihail", "elric"], "links": ["baron-mihail", "elric", "the-thirteen", "olegzander", "the-grimoire"] },
